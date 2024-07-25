@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Calculator</title>
+  <link rel="icon" type="image/x-icon" href="imgs/calc-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+    <main>
+      <form id="hourForm">
+        <div class="startTimeContainer">
+          <label for="startHour">Start time:</label>
+          <input type="number" id="startHour" name="startHour" min="1" max="12" step="1" required>
+          <span>:</span>
+          <input type="number" id="startMinute" name="startMinute" min="0" max="59" step="1" required>
+          <select id="startPeriod" name="startPeriod" required>
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </div>
 
+        <br>
+
+        <div class="endTimeContainer">
+          <label for="endHour">End time:</label>
+          <input type="number" id="endHour" name="endHour" min="1" max="12" step="1" required>
+          <span>:</span>
+          <input type="number" id="endMinute" name="endMinute" min="0" max="59" step="1" required>
+          <select id="endPeriod" name="endPeriod" required>
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </div>
+
+        <br>
+
+        <button type="button" onclick="calculateHours()">Calculate</button>
+      </form>
+      <p id="result"></p>
+    </main>
+
+    <footer>
+      <nav>
+        <a class="icons" href="https://github.com/LisoMaps/hour-counter" title="Github repo" target="_blank"><i class="fab fa-github"></i></a>
+        <a class="icons" href="https://www.linkedin.com/in/chip-weir/" title="LinkedIn profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a class="icons" href="mailto:work.weir@gmail.com" title="Get in touch" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+      </nav>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
