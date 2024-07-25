@@ -1,1 +1,1 @@
-# hour-counter
+# Time calculator
